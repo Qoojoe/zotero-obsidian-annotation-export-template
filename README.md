@@ -30,6 +30,7 @@ Extracts:
 	- Differing symbols based on annotation type (Lucide icons: "highlighter", "underline", and "image")
 	- Extraction of images supported
 		- Automatically centered (CSS snippet taken from [gautamneeraj](https://forum.obsidian.md/t/align-image/78050))
+- **Page numbers are functioning links that will open the corresponding section in Zotero**
 - Comments, if available
 - Annotation tags, if available
 	- "Blocked" via code formatting (backtick character) from becoming recognized tags in Obsidian (can be easily unblocked by removing backticks in template)
@@ -54,3 +55,5 @@ Extracts:
   - Yes. The colours are defined at the beginning of the CSS. Simply change them there and all the types of annotation of the same colour will change too.
 -  Why are the "headers" of the callouts under the main text?
   - It is closer to the usual structure of citing text in academia. If you wish to disable it, simply delete or comment out the sections in the CSS that have the headers "Paratext under..."
+- What kind of citation style is used in the header of the callouts?
+	- It's not a real citation style, and instead a mostly improvised solution that contains enough information (authors, title, year and page number) to understand at a glance the origin of the excerpt, when removed from its original context, for example as an embed.
