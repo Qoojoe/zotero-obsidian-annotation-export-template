@@ -1,0 +1,454 @@
+/* IMPORTANT NOTE: CALLOUTS CANNOT BE IN ANY WAY CAPITALIZED IN THE CSS, "highlight-Yellow" DOES NOT WORK. Inside Obsidian it is however case-insensitive */
+:root {
+    /* DEFINING THE COLOURS */
+    --zotero-yellow: 255, 212, 0;
+    --zotero-red: 255, 102, 102;
+    --zotero-green: 95, 178, 54;
+    --zotero-blue: 46, 168, 229;
+    --zotero-purple: 162, 138, 229;
+    --zotero-magenta: 229, 110, 238;
+    --zotero-orange: 241, 152, 55;
+    --zotero-gray: 170, 170, 170;
+}
+
+/* CALLOUTS FOR HIGHLIGHTS */
+.callout[data-callout^="highlight-yellow"] {
+    --callout-color: var(--zotero-yellow);
+    --callout-icon: highlighter;
+    background-color: rgba(var(--zotero-yellow), 0.1);
+}
+
+.callout[data-callout^="highlight-red"] {
+    --callout-color: var(--zotero-red);
+    --callout-icon: highlighter;
+    background-color: rgba(var(--zotero-red), 0.1);
+}
+
+.callout[data-callout^="highlight-green"] {
+    --callout-color: var(--zotero-green);
+    --callout-icon: highlighter;
+    background-color: rgba(var(--zotero-green), 0.1);
+}
+
+.callout[data-callout^="highlight-blue"] {
+    --callout-color: var(--zotero-blue);
+    --callout-icon: highlighter;
+    background-color: rgba(var(--zotero-blue), 0.1);
+}
+
+.callout[data-callout^="highlight-purple"] {
+    --callout-color: var(--zotero-purple);
+    --callout-icon: highlighter;
+    background-color: rgba(var(--zotero-purple), 0.1);
+}
+
+.callout[data-callout^="highlight-magenta"] {
+    --callout-color: var(--zotero-magenta);
+    --callout-icon: highlighter;
+    background-color: rgba(var(--zotero-magenta), 0.1);
+}
+
+.callout[data-callout^="highlight-orange"] {
+    --callout-color: var(--zotero-orange);
+    --callout-icon: highlighter;
+    background-color: rgba(var(--zotero-orange), 0.1);
+}
+
+.callout[data-callout^="highlight-gray"] {
+    --callout-color: var(--zotero-gray);
+    --callout-icon: highlighter;
+    background-color: rgba(var(--zotero-gray), 0.1);
+}
+
+
+/* PUTTING THE PARATEXT UNDERNEATH FOR HIGHLIGHT CALLOUTS */
+
+.callout[data-callout="highlight-yellow"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="highlight-yellow"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="highlight-yellow"] > .callout-title > .callout-icon,
+  .callout[data-callout="highlight-yellow"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='highlight-yellow'] .callout-content p/* ,
+.callout[data-callout='highlight-yellow'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="highlight-red"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="highlight-red"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="highlight-red"] > .callout-title > .callout-icon,
+  .callout[data-callout="highlight-red"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='highlight-red'] .callout-content p/* ,
+.callout[data-callout='highlight-red'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="highlight-green"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="highlight-green"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="highlight-green"] > .callout-title > .callout-icon,
+  .callout[data-callout="highlight-green"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='highlight-green'] .callout-content p/* ,
+.callout[data-callout='highlight-green'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="highlight-blue"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="highlight-blue"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="highlight-blue"] > .callout-title > .callout-icon,
+  .callout[data-callout="highlight-blue"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='highlight-blue'] .callout-content p/* ,
+.callout[data-callout='highlight-blue'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="highlight-purple"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="highlight-purple"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="highlight-purple"] > .callout-title > .callout-icon,
+  .callout[data-callout="highlight-purple"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='highlight-purple'] .callout-content p/* ,
+.callout[data-callout='highlight-purple'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="highlight-magenta"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="highlight-magenta"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="highlight-magenta"] > .callout-title > .callout-icon,
+  .callout[data-callout="highlight-magenta"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='highlight-magenta'] .callout-content p/* ,
+.callout[data-callout='highlight-magenta'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="highlight-orange"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="highlight-orange"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="highlight-orange"] > .callout-title > .callout-icon,
+  .callout[data-callout="highlight-orange"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='highlight-orange'] .callout-content p/* ,
+.callout[data-callout='highlight-orange'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="highlight-gray"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="highlight-gray"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="highlight-gray"] > .callout-title > .callout-icon,
+  .callout[data-callout="highlight-gray"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='highlight-gray'] .callout-content p/* ,
+.callout[data-callout='highlight-gray'] .callout-content p  */{
+   margin-top: 0;
+}
+
+/* CALLOUTS FOR PICTURES (INCLUDES COLOUR) */
+
+.callout[data-callout^="pic-yellow"] {
+    --callout-color: var(--zotero-yellow);
+    --callout-icon: image;
+    background-color: rgba(var(--zotero-yellow), 0.1);
+}
+
+.callout[data-callout^="pic-red"] {
+    --callout-color: var(--zotero-red);
+    --callout-icon: image;
+    background-color: rgba(var(--zotero-red), 0.1);
+}
+
+.callout[data-callout^="pic-green"] {
+    --callout-color: var(--zotero-green);
+    --callout-icon: image;
+    background-color: rgba(var(--zotero-green), 0.1);
+}
+
+.callout[data-callout^="pic-blue"] {
+    --callout-color: var(--zotero-blue);
+    --callout-icon: image;
+    background-color: rgba(var(--zotero-blue), 0.1);
+}
+
+.callout[data-callout^="pic-purple"] {
+    --callout-color: var(--zotero-purple);
+    --callout-icon: image;
+    background-color: rgba(var(--zotero-purple), 0.1);
+}
+
+.callout[data-callout^="pic-magenta"] {
+    --callout-color: var(--zotero-magenta);
+    --callout-icon: image;
+    background-color: rgba(var(--zotero-magenta), 0.1);
+}
+
+.callout[data-callout^="pic-orange"] {
+    --callout-color: var(--zotero-orange);
+    --callout-icon: image;
+    background-color: rgba(var(--zotero-orange), 0.1);
+}
+
+.callout[data-callout^="pic-gray"] {
+    --callout-color: var(--zotero-gray);
+    --callout-icon: image;
+    background-color: rgba(var(--zotero-gray), 0.1);
+}
+
+/* CENTERING IMAGES WITHIN CALLOUT - Taken from https://forum.obsidian.md/t/align-image/78050 */
+
+img[alt*="center"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img[alt*="right"] {
+    float:right;
+    clear:right;
+    margin-left: 1rem;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+/* CALLOUTS FOR UNDERLINED SECTIONS */
+
+.callout[data-callout^="underline-yellow"] {
+    --callout-color: var(--zotero-yellow);
+    --callout-icon: underline;
+    background-color: rgba(var(--zotero-yellow), 0.1);
+}
+
+.callout[data-callout^="underline-red"] {
+    --callout-color: var(--zotero-red);
+    --callout-icon: underline;
+    background-color: rgba(var(--zotero-red), 0.1);
+}
+
+.callout[data-callout^="underline-green"] {
+    --callout-color: var(--zotero-green);
+    --callout-icon: underline;
+    background-color: rgba(var(--zotero-green), 0.1);
+}
+
+.callout[data-callout^="underline-blue"] {
+    --callout-color: var(--zotero-blue);
+    --callout-icon: underline;
+    background-color: rgba(var(--zotero-blue), 0.1);
+}
+
+.callout[data-callout^="underline-purple"] {
+    --callout-color: var(--zotero-purple);
+    --callout-icon: underline;
+    background-color: rgba(var(--zotero-purple), 0.1);
+}
+
+.callout[data-callout^="underline-magenta"] {
+    --callout-color: var(--zotero-magenta);
+    --callout-icon: underline;
+    background-color: rgba(var(--zotero-magenta), 0.1);
+}
+
+.callout[data-callout^="underline-orange"] {
+    --callout-color: var(--zotero-orange);
+    --callout-icon: underline;
+    background-color: rgba(var(--zotero-orange), 0.1);
+}
+
+.callout[data-callout^="underline-gray"] {
+    --callout-color: var(--zotero-gray);
+    --callout-icon: underline;
+    background-color: rgba(var(--zotero-gray), 0.1);
+}
+
+/* PUTTING THE PARATEXT OF THE UNDERLINE CALLOUT UNDERNEATH THE TEXT */
+
+.callout[data-callout="underline-yellow"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="underline-yellow"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="underline-yellow"] > .callout-title > .callout-icon,
+  .callout[data-callout="underline-yellow"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='underline-yellow'] .callout-content p/* ,
+.callout[data-callout='underline-yellow'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="underline-red"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="underline-red"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="underline-red"] > .callout-title > .callout-icon,
+  .callout[data-callout="underline-red"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='underline-red'] .callout-content p/* ,
+.callout[data-callout='underline-red'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="underline-green"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="underline-green"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="underline-green"] > .callout-title > .callout-icon,
+  .callout[data-callout="underline-green"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='underline-green'] .callout-content p/* ,
+.callout[data-callout='underline-green'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="underline-blue"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="underline-blue"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="underline-blue"] > .callout-title > .callout-icon,
+  .callout[data-callout="underline-blue"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='underline-blue'] .callout-content p/* ,
+.callout[data-callout='underline-blue'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="underline-purple"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="underline-purple"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="underline-purple"] > .callout-title > .callout-icon,
+  .callout[data-callout="underline-purple"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='underline-purple'] .callout-content p/* ,
+.callout[data-callout='underline-purple'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="underline-magenta"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="underline-magenta"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="underline-magenta"] > .callout-title > .callout-icon,
+  .callout[data-callout="underline-magenta"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='underline-magenta'] .callout-content p/* ,
+.callout[data-callout='underline-magenta'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="underline-orange"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="underline-orange"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="underline-orange"] > .callout-title > .callout-icon,
+  .callout[data-callout="underline-orange"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='underline-orange'] .callout-content p/* ,
+.callout[data-callout='underline-orange'] .callout-content p  */{
+   margin-top: 0;
+}
+
+.callout[data-callout="underline-gray"] {
+    display: flex;
+    flex-direction: column-reverse;
+    /* --callout-padding: 8px 1rem; */
+  }.callout[data-callout="underline-gray"] > .callout-title {
+    /* margin-block: .5em; */
+   text-indent: 1.25em;
+  }
+.callout[data-callout="underline-gray"] > .callout-title > .callout-icon,
+  .callout[data-callout="underline-gray"] > .callout-title > .callout-icon {
+    transform: scale(-1, 1);
+  }
+  .callout[data-callout='underline-gray'] .callout-content p/* ,
+.callout[data-callout='underline-gray'] .callout-content p  */{
+   margin-top: 0;
+}
