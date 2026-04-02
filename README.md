@@ -1,6 +1,6 @@
 # zotero-obsidian-annotation-export
 Templates for exporting annotations from Zotero into Obsidian via [Zotero integration](https://github.com/obsidian-community/obsidian-zotero-integration).
-Formatting is focused on callouts, to make embedding in other files in Obsidian easier. No AI was used.
+Formatting is focused on callouts, to make embedding in other files in Obsidian easier. Some influence was taken from [Albialy's template](https://forum.obsidian.md/t/my-zotero-annotation-template-that-works/51662) (Thank you!). No AI was used.
 # Overview
 Exported file will contain the following:
 ## Properties
@@ -33,7 +33,7 @@ Extracts:
 - **Page numbers are functioning links that will open the corresponding section in Zotero**
 - Comments, if available
 - Annotation tags, if available
-	- "Blocked" via code formatting (backtick character) from becoming recognized tags in Obsidian (can be easily unblocked by removing backticks in template)
+	- "Blocked" via code formatting (backtick character) from becoming functioning tags in Obsidian (can be easily unblocked by removing backticks in template)
 ### Related works
 - Works that are marked as related in Zotero are automatically listed at the end of the exported file
 	- Corresponding Zotero link is automatically generated
@@ -41,8 +41,8 @@ Extracts:
 		- Will be generated, even if the linked to work is not yet exported into Obsidian (as unresolved link)
 # FAQ
 - What do I do with these files?
-  1. Add the CSS snippet under "Appearance>CSS snippets" by clicking on the "File" symbol and copying the .css in there
-  2. Copy the .md files somewhere in your Vault (preferably into a dedicated Templates) folder
+  1. Add the CSS snippet under "Appearance>CSS snippets" by clicking on the "File" symbol and copying the .css into the newly opened file explorer window.
+  2. Copy the .md files somewhere in your Vault (preferably into a dedicated Templates folder)
   3. Open the options page for Zotero integration and click on "Add Import Format"
   4. Give the Import Format a recognizable name like "Full PDF"
   5. Set the output path (preferably to a dedicated Zotero import folder) and make sure that it ends in "{{citekey}}.md"
