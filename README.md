@@ -46,11 +46,13 @@ Extracts:
 	- Corresponding Obsidian link is generated
 		- Will be generated, even if the linked to work is not yet exported into Obsidian (as unresolved link)
 # Customization options
+- Properties
+	- You might want to have the properties in the imported file to integrate into your existing property system. Simply change the properties at the top of the template file to how you like them in Source Mode.
 - Colours of the callouts
 	- Open the CSS file and there at the top you will find how the colours are defined (in RGB) for the rest of the CSS style.
 - Collapsible comment options
 - Tag deactivation
-	- Don't want tags on annotations being recognized by Obsidian? Simply add a backtick "\`" before `#{{annotation.allTags}}` and the tags will be visible, but not recognized by Obsidian.
+	- Don't want tags on annotations being recognized by Obsidian? Simply add a backtick "\`" before `#{{annotation.allTags}}` and after, and the tags will be visible, but not recognized by Obsidian.
 # FAQ
 - What do I do with these files?
   1. Make sure that "Zotero Integration" is installed in Obsidian and ["Better BibTeX for Zotero"](https://github.com/retorquere/zotero-better-bibtex) in Zotero. And that both programs are open at the same time!
