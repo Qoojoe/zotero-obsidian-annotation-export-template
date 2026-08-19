@@ -1,7 +1,7 @@
 # zotero-obsidian-annotation-export
-Templates for exporting annotations from Zotero into Obsidian via [Zotero integration](https://github.com/obsidian-community/obsidian-zotero-integration). Tested with PDF and EPUB.
+Templates for exporting annotations from Zotero into Obsidian via [Zotero integration](https://github.com/obsidian-community/obsidian-zotero-integration) and custom CSS styling. Tested with PDF and EPUB. A preset bases file with the default properties is also available.
 Formatting is focused on callouts, to make embedding in other files in Obsidian easier. Some influence was taken from [Albialy's template](https://forum.obsidian.md/t/my-zotero-annotation-template-that-works/51662) (Thank you!). No AI was used.
-At this moment there are two prebuilt versions with slightly differing styling:
+At this moment there are two prebuilt template versions with slightly differing styling:
 - "Bulleted style": Comments and tags follow after the callout as bullet points, and are therefore not included when the callout is embedded
 - "Nested style": Utilizes "nested" callouts within the annotation callouts to display comments and tags
 # Overview
