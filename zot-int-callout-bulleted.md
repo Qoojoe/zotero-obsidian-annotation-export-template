@@ -48,7 +48,7 @@ status: "Read"
 > {% if annotation.color %}{{annotation.annotatedText|safe|replace("\n", "\n >")}} {% else %}{{annotation.type | capitalize}} {% endif %}{%- endif %}{%- if annotation.imageRelativePath %}> [!pic-{{annotation.colorCategory}}] **Image from:** {{authors}}: "{{title}}" ({{date | format("YYYY")}}), p. [{{annotation.pageLabel}}](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.page}}&annotation={{annotation.id}})
 >![[{{annotation.imageRelativePath}}|center]]{%- endif %}{% if annotation.comment %}
 - **Comment:** *{{annotation.comment}}*{% endif %}
-{% if annotation.allTags %}- **Tags:** `#{{annotation.allTags|replace(" ", "_")}}`
+{% if annotation.hashTags %}- **Tags:** {{annotation.hashTags|replace(" ", "_")|replace(",_", " ")}}
 {% endif %}
 {% endfor -%}
 # Related works
@@ -56,3 +56,5 @@ status: "Read"
    - *[Open in Zotero]({{relation.select}})
    - **[[{{relation.citekey}}|Obsidian link]]**{% if not loop.last %}
 - {% endif%}{% endfor %}
+
+%% Version 1.0 - Bulleted %%
