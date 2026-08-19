@@ -1,0 +1,48 @@
+filters:
+  and:
+    - file.hasTag("zotero-import")
+    - '!file.inFolder("Obsidian maintenance/Deprecated templates")'
+formulas:
+  Untitled: Released.format("YYYY")
+  Untitled 2: link(file.name, title)
+  Zotero link: link(note["local-link"], "Open")
+  DOI: link(note["DOI"], "Link")
+properties:
+  formula.Untitled:
+    displayName: Released
+  note.author:
+    displayName: Author(s)
+  file.name:
+    displayName: Citation key
+  formula.Untitled 2:
+    displayName: Title
+  formula.Zotero link:
+    displayName: Zotero
+  note.source:
+    displayName: Source
+  note.tags:
+    displayName: Tags
+views:
+  - type: table
+    name: Table
+    order:
+      - formula.Untitled 2
+      - Status
+      - formula.Zotero link
+      - author
+      - formula.Untitled
+      - formula.DOI
+      - ISBN
+      - source
+      - tags
+    sort:
+      - property: formula.Untitled 2
+        direction: ASC
+      - property: Released
+        direction: ASC
+    columnSize:
+      formula.Zotero link: 74
+      note.author: 214
+      formula.DOI: 63
+      note.ISBN: 164
+    rowHeight: medium
