@@ -20,6 +20,7 @@ Extracts:
 ## Text
 - Link to entry in Zotero
 - Abstract (optional)
+- Ready to copy citation in the style of your choosing
 - Headers for
 	- Linking to other concepts or similar in Vault
 	- Summary
@@ -37,23 +38,30 @@ Extracts:
 - **Page numbers are functioning links that will open the corresponding section in Zotero**
 	- Omitted automatically if the annotations were made in an EPUB (due to lack of static pages)
 - Comments, if available
+	- Formatted as nested callout (Default is collapsed, which can be opened by clicking on the ">" symbol 
 - Annotation tags, if available
-	- "Blocked" via code formatting (backtick character) from becoming functioning tags in Obsidian (can be easily unblocked by removing backticks in template)
 ### Related works
 - Works that are marked as related in Zotero are automatically listed at the end of the exported file
 	- Corresponding Zotero link is automatically generated
 	- Corresponding Obsidian link is generated
 		- Will be generated, even if the linked to work is not yet exported into Obsidian (as unresolved link)
+# Customization options
+- Colours of the callouts
+	- Open the CSS file and there at the top you will find how the colours are defined (in RGB) for the rest of the CSS style.
+- Collapsible comment options
+- Tag deactivation
+	- Don't want tags on annotations being recognized by Obsidian? Simply add a backtick "\`" before `#{{annotation.allTags}}` and the tags will be visible, but not recognized by Obsidian.
 # FAQ
 - What do I do with these files?
-  1. Add the CSS snippet under "Appearance>CSS snippets" by clicking on the "File" symbol and copying the .css into the newly opened file explorer window.
-  2. Copy the .md file somewhere in your Vault (preferably into a dedicated Templates folder)
-  3. Open the options page for Zotero integration and click on "Add Import Format"
-  4. Give the Import Format a recognizable name like "Full PDF"
-  5. Set the output path (preferably to a dedicated Zotero import folder in your Vault) and make sure that it ends in "{{citekey}}.md"
-  6. Select the template file (Type in the name and it should suggest it to you)
-  7. Choose a bibliography style of your liking (or pick "American Psychological Association 7th edition", if you are not sure)
-  8. Open the command palette and look for "Zotero Integration" and then the format name you chose
+  1. Make sure that "Zotero Integration" is installed in Obsidian and ["Better BibTeX for Zotero"](https://github.com/retorquere/zotero-better-bibtex) in Zotero. And that both programs are open at the same time!
+  2. Add the CSS snippet under "Appearance>CSS snippets" by clicking on the "File" symbol and copying the .css into the newly opened file explorer window.
+  3. Copy the .md file somewhere in your Vault (preferably into a dedicated Templates folder)
+  4. Open the options page for Zotero Integration and click on "Add Import Format"
+  5. Give the Import Format a recognizable name like "Export of all annotations"
+  6. Set the output path (preferably to a dedicated Zotero import folder in your Vault) and make sure that it ends in "{{citekey}}.md"
+  7. Select the template file (Type in the name and it should suggest it to you)
+  8. Choose a bibliography style of your liking (or pick "American Psychological Association 7th edition", if you are not sure)
+  9. Open the command palette and look for "Zotero Integration" and then the format name you chose
 - What is the programming language/template engine?
   - Jinja. Search for "Jinja loops" or similar to learn more about how the looping and if statements are formatted.
 - Can I change the colours of the callouts?
