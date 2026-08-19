@@ -1,29 +1,29 @@
 ---
 tags:
   - zotero-import{% for tag in tags -%}{% if tag.tag %}
-  - {{tag.tag}}{% endif %}{% endfor %}
+  - {{tag.tag|replace(" ", "_")}}{% endif %}{% endfor %}
 aliases:
   - "{{title}}"
 author:
 {% for creator in creators %}- "{{creator.lastName}}, {{creator.firstName}}"
 {% endfor -%}
 title: "{{title}}"
-Released: {{date | format("YYYY-MM-DD")}}
-Citekey: {{citekey}}
+released: {{date | format("YYYY-MM-DD")}}
+citekey: {{citekey}}
 relevant: {% for relation in relations %}
 - "[[{{relation.citekey}}|{{relation.title}}]]"{% endfor %}{% if DOI %}
-DOI: "https://doi.org/{{DOI}}"{% endif %}
+doi: "https://doi.org/{{DOI}}"{% endif %}
 {% if ISBN -%}
-ISBN: "{{ISBN}}"{% endif %}
+isbn: "{{ISBN}}"{% endif %}
 source: "{{url}}"
-Local link: "{{desktopURI}}"
+local-link: "{{desktopURI}}"
 language: "{{language}}"
-Status: "Read"
+status: "Read"
 ---
 ## [{{title}}]({{desktopURI}})
 
 {% if abstractNote %}> [!abstract]- 
-> {{abstractNote}}
+> {{abstractNote|replace("\n", "\n >")}}
 
 {% endif %}> [!Cite] Citation
 > {{bibliography}}
@@ -33,14 +33,22 @@ Status: "Read"
 - 
 # Criticism
 - 
-# Notes & excerpts
+{% if markdownNotes %}# Notes
+{%- for note in notes |sort(attribute="dateAdded") %}
+> [!note] **[Note]({{note.desktopURI}}) for:**  {{authors}}: "{{title}}" ({{date | format("YYYY")}})
+> {{note.note|replace("\n", "\n> ")}}
+{% endfor %}
+{%- endif -%}
+# Excerpts
 {% for annotation in annotations -%}
 {%- if annotation.annotatedText -%}
-> [!{{annotation.type}}-{{annotation.colorCategory}}] {{authors}}: "{{title}}" ({{date | format("YYYY")}}), p. [{{annotation.pageLabel}}](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.page}}&annotation={{annotation.id}})
-> {% if annotation.color %}{{annotation.annotatedText | safe}} {% else %}{{annotation.type | capitalize}} {% endif %}{%- endif %}{%- if annotation.imageRelativePath %}> [!pic-{{annotation.colorCategory}}] **Image from:** {{authors}}: "{{title}}" ({{date | format("YYYY")}}), p. [{{annotation.pageLabel}}](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.page}}&annotation={{annotation.id}})
+> [!{{annotation.type}}-{{annotation.colorCategory}}] {{authors}}: "{{title}}" ({{date | format("YYYY")}})
+{%- if annotation.pageLabel -%}
+, p. [{{annotation.pageLabel}}](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.page}}&annotation={{annotation.id}}) {% endif %}
+> {% if annotation.color %}{{annotation.annotatedText|safe|replace("\n", "\n >")}} {% else %}{{annotation.type | capitalize}} {% endif %}{%- endif %}{%- if annotation.imageRelativePath %}> [!pic-{{annotation.colorCategory}}] **Image from:** {{authors}}: "{{title}}" ({{date | format("YYYY")}}), p. [{{annotation.pageLabel}}](zotero://open-pdf/library/items/{{annotation.attachment.itemKey}}?page={{annotation.page}}&annotation={{annotation.id}})
 >![[{{annotation.imageRelativePath}}|center]]{%- endif %}{% if annotation.comment %}
 - **Comment:** *{{annotation.comment}}*{% endif %}
-{% if annotation.allTags %}- **Tags:** `#{{annotation.allTags}}`
+{% if annotation.allTags %}- **Tags:** `#{{annotation.allTags|replace(" ", "_")}}`
 {% endif %}
 {% endfor -%}
 # Related works
