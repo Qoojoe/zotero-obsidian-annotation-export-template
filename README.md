@@ -55,30 +55,38 @@ Extracts:
 - Colours of the callouts
 	- Open the CSS file and there at the top you will find how the colours are defined (in RGB) for the rest of the CSS style.
 - Icons of callouts
-	- Can be changed in the CSS file. Simply search for "--callout-icon: " and you will find all editable icons. Alternative icons with their names can be found on [lucide.dev](https://lucide.dev/) and do not need to be downloaded, they are pre-installed in Obsidian.
+	- Can be changed in the CSS file. Simply search for `--callout-icon: ` and you will find all editable icons. Alternative icons with their names can be found on [lucide.dev](https://lucide.dev/) and do not need to be downloaded, they are pre-installed in Obsidian.
+- Position of callout header
+	- Default position of header is **under** the annotation. To return to the normal style of Obsidian go into the CSS and comment out/delete the sections called "Paratext under..."
 - Collapsible comment & tag options
 	- As default comment & tag callouts are collapsed, and can be opened by clicking ">". If you don't want this search for `"[!note]- **Comment:**"` or `[!tag]- **Tags:**` and remove the `-` or replace it with a `+` to make the default expanded, but still collapsible, if needed.
 - Tag deactivation
 	- Don't want tags on annotations being recognized by Obsidian? Simply add a backtick ("\`") before `{{annotation.hashTags}}` and after, and the tags will be visible, but not recognized by Obsidian.
+# "Installation" guide
+1. Make sure that "Zotero Integration" is installed in Obsidian and ["Better BibTeX for Zotero"](https://github.com/retorquere/zotero-better-bibtex) in Zotero. And that both programs are open at the same time!
+2. Add the CSS snippet under "Appearance>CSS snippets" by clicking on the "File" symbol and copy the .css into the newly opened file explorer window.
+3. Download one (or both) of the `.md` files and put it somewhere in your Vault (preferably into a dedicated Templates folder)
+4. Open the options page for Zotero Integration and click on "Add Import Format"
+5. Give the Import Format a recognizable name like "Full annotation export" (You'll have to find it in the command palette again later)
+6. Set the output path (preferably to a dedicated Zotero import folder in your Vault) and make sure that it ends in `{{citekey}}.md`
+7. Select the template file (Type in the name and it should suggest it to you)
+8. Choose a bibliography style of your liking (or pick "American Psychological Association 7th edition", if you are not sure)
+
+**Congratulations, you are done!** Now you can import from Zotero with the command palette and look for "Zotero Integration" and then the format name you chose. A search bar from Zotero should open up, where you can type in what you are looking for. Press Enter, and the rest should happen automatically.
 # FAQ
-- What do I do with these files?
-  1. Make sure that "Zotero Integration" is installed in Obsidian and ["Better BibTeX for Zotero"](https://github.com/retorquere/zotero-better-bibtex) in Zotero. And that both programs are open at the same time!
-  2. Add the CSS snippet under "Appearance>CSS snippets" by clicking on the "File" symbol and copy the .css into the newly opened file explorer window.
-  3. Copy the .md file somewhere in your Vault (preferably into a dedicated Templates folder)
-  4. Open the options page for Zotero Integration and click on "Add Import Format"
-  5. Give the Import Format a recognizable name like "Export of all annotations"
-  6. Set the output path (preferably to a dedicated Zotero import folder in your Vault) and make sure that it ends in "{{citekey}}.md"
-  7. Select the template file (Type in the name and it should suggest it to you)
-  8. Choose a bibliography style of your liking (or pick "American Psychological Association 7th edition", if you are not sure)
-  9. Open the command palette and look for "Zotero Integration" and then the format name you chose
+- Why is this focused on callouts?
+	- Multiple reasons:
+		- Citing/Embedding an excerpt/annotation in another Obsidian note is incredibly convenient with callouts: The entire callout is always part of the embed.
+		- I find it easier to visually navigate than anything else I've seen online
 - What is the programming language/template engine?
-  - Jinja. Search for "Jinja loops" or similar to learn more about how the looping and if statements are formatted.
-- Can I change the colours of the callouts?
-  - Yes. The colours are defined at the beginning of the CSS. Simply change them there and all the types of annotation of the same colour will change too.
--  Why are the "headers" of the callouts under the main text?
+  - Jinja. Learn more about how the looping and if statements are formatted [here](https://jinja.palletsprojects.com/en/stable/templates/)
+- Why are the callout headers **under** the content?
   - It is closer to the usual structure of citing text in academia. If you wish to disable it, simply delete or comment out the sections in the CSS that have the headers "Paratext under..."
 - What kind of citation style is used in the header of the callouts?
-	- It's not a real citation style, and instead a mostly improvised solution that contains enough information (authors, title, year and page number) to understand at a glance the origin of the excerpt, when removed from its original context, for example as an embed.
+	- It's not a "real" citation style, and instead a mostly improvised solution that contains enough information (authors, title, year and page number) to understand at a glance the origin of the excerpt, when removed from its original context, for example as an embed.
+- I have overwritten a file I modified by importing it again from Zotero! Are my changes gone?
+	- Obsidian has a native file recovery plug-in. Look for "file recovery" in the command palette while in the overwritten file and check the available versions. If an older version has been saved, you can select "Restore"
+		- I recommend moving modified files to a separate folder, there they will no longer be overwritten, if you import the same text from Zotero
 ## Known issues
 - Editing the properties of a template in Obsidian can cause weird behavior where Obsidian "auto-formats" values of a property (e.g. {{value}} becomes '{ value }')
-	- Solution: Edit in external text editor. I recommend Kate. 
+	- Solution: Edit in external text editor. I recommend Kate.
