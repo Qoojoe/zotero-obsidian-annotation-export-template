@@ -49,6 +49,10 @@ Extracts:
 	- Corresponding Zotero link is automatically generated
 	- Corresponding Obsidian link is generated
 		- Will be generated, even if the linked to work is not yet exported into Obsidian (as unresolved link)
+## Formatting preview
+![Preview of export formatting](preview/export-preview.png)
+![Preview of image export](preview/image_export-preview.png)
+![Style comparison](preview/style_comparison.png)
 # Customization options
 - Properties
 	- You might want to have the properties in the imported file to integrate into your existing property system. Simply change the properties at the top of the template file to how you like them in Source Mode.
@@ -87,6 +91,8 @@ Extracts:
 - I have overwritten a file I modified by importing it again from Zotero! Are my changes gone?
 	- Obsidian has a native file recovery plug-in. Look for "file recovery" in the command palette while in the overwritten file and check the available versions. If an older version has been saved, you can select "Restore"
 		- I recommend moving modified files to a separate folder, there they will no longer be overwritten, if you import the same text from Zotero
+- Why are comments automatically turned Italic?
+	- To differentiate them visually more from the annotated text. Can be easily removed.
 ## Known issues
 - Editing the properties of a template in Obsidian can cause weird behavior where Obsidian "auto-formats" values of a property (e.g. {{value}} becomes '{ value }')
 	- Solution: Edit in external text editor. I recommend Kate.
