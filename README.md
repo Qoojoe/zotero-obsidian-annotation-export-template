@@ -69,12 +69,14 @@ Extracts:
 # "Installation" guide
 1. Make sure that "Zotero Integration" is installed in Obsidian and ["Better BibTeX for Zotero"](https://github.com/retorquere/zotero-better-bibtex) in Zotero. And that both programs are open at the same time!
 2. Add the CSS snippet under "Appearance>CSS snippets" by clicking on the "File" symbol and copy the .css into the newly opened file explorer window.
-3. Download one (or both) of the `.md` files and put it somewhere in your Vault (preferably into a dedicated Templates folder)
-4. Open the options page for Zotero Integration and click on "Add Import Format"
-5. Give the Import Format a recognizable name like "Full annotation export" (You'll have to find it in the command palette again later)
-6. Set the output path (preferably to a dedicated Zotero import folder in your Vault) and make sure that it ends in `{{citekey}}.md`
-7. Select the template file (Type in the name and it should suggest it to you)
-8. Choose a bibliography style of your liking (or pick "American Psychological Association 7th edition", if you are not sure)
+3. Make sure that you reload the snippets (click the "cycle" symbol next to the folder symbol) and turn on the snippet.
+	- Sometimes Obsidian does not immediately reload CSS. In that case, restart Obsidian manually.
+5. Download one (or both) of the `.md` files and put it somewhere in your Vault (preferably into a dedicated Templates folder)
+6. Open the options page for Zotero Integration and click on "Add Import Format"
+7. Give the Import Format a recognizable name like "Full annotation export" (You'll have to find it in the command palette again later)
+8. Set the output path (preferably to a dedicated Zotero import folder in your Vault) and make sure that it ends in `{{citekey}}.md`
+9. Select the template file (Type in the name and it should suggest it to you)
+10. Choose a bibliography style of your liking (or pick "American Psychological Association 7th edition", if you are not sure)
 
 **Congratulations, you are done!** Now you can import from Zotero with the command palette and look for "Zotero Integration" and then the format name you chose. A search bar from Zotero should open up, where you can type in what you are looking for. Press Enter, and the rest should happen automatically.
 # FAQ
