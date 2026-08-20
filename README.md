@@ -98,3 +98,7 @@ Extracts:
 ## Known issues
 - Editing the properties of a template in Obsidian can cause weird behavior where Obsidian "auto-formats" values of a property (e.g. {{value}} becomes '{ value }')
 	- Solution: Edit in external text editor. I recommend Kate.
+- Interference with other plug-ins
+	- The following plug-ins are known to cause issues:
+		 - **Style Settings** seems to override the CSS style in some cases
+		 	- So far unclear what exact setting causes this
